@@ -15,6 +15,10 @@ embassy-nrf = { git = "https://github.com/akiles/embassy", default-features = fa
     "52840"
 ] }
 
+# for cargo flash
+[package.metadata]
+chip = "nRF52840_xxAA"
+
 # setting dev to same as release until theres a way to have
 # vscode run use release mode. Almost nobody has a debugger
 # hooked up anyway, but if you'll need to change this
