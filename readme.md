@@ -4,8 +4,7 @@ The dongle comes with a dfu bootloader and from nordic.
 
 ## prereqs
 
-* dongle-flash `cargo install --git https://github.com/ferrous-systems/embedded-trainings-2020 dongle-flash --branch main`
-* install python and `pip install nrfutil`
+* [nrfdfu](https://github.com/ferrous-systems/nrfdfu-rs) `cargo install nrfdfu`
 
 ## flash
 
@@ -16,7 +15,7 @@ Since its dfu bootloaded the dev profile is setup just like a release profile so
 
 ## to get the stock bootlaoder back if you lost it
 
-Youll need a jlink programmer and the tagconnect spring connector.
+Youll need a jlink programmer and the tagconnect spring connector (but you would have probably needed that to remove the bootloader in the first place).
 
 * download [7853.pca10059_bootloader_mbr_v1.0.1.hex](https://devzone.nordicsemi.com/f/nordic-q-a/40924/how-can-i-restore-the-original-bootloader-of-a-pca10059)
 * download [nrfjprog](https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Command-Line-Tools)

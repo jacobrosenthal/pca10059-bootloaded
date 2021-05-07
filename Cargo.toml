@@ -5,9 +5,9 @@ authors = ["Jacob Rosenthal <jacobrosenthal@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-nrf52840-hal = { version = "0.12.0", features = ["rt"] }
+nrf52840-hal = { version = "0.12.1", features = ["rt"] }
 cortex-m-rt = "0.6.13"
-cortex-m = "0.6.4"
+cortex-m = "0.7.2"
 
 # setting dev to same as release until theres a way to have
 # vscode run use release mode. Almost nobody has a debugger

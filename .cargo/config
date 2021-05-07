@@ -1,5 +1,5 @@
-[target.thumbv7em-none-eabihf]
-runner = "dongle-flash"
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+runner = "nrfdfu"
 
 [build]
 target = "thumbv7em-none-eabihf"
