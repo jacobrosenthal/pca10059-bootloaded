@@ -13,11 +13,10 @@ The dongle comes with a dfu bootloader and from nordic.
 
 Since its dfu bootloaded the dev profile is setup just like a release profile so you don't need `--release`
 
-## to get the stock bootlaoder back if you lost it
+## to get the stock bootloader back if you lost it
 
 Youll need a jlink programmer and the tagconnect spring connector (but you would have probably needed that to remove the bootloader in the first place).
 
-* download [7853.pca10059_bootloader_mbr_v1.0.1.hex](https://devzone.nordicsemi.com/f/nordic-q-a/40924/how-can-i-restore-the-original-bootloader-of-a-pca10059)
-* download [nrfjprog](https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Command-Line-Tools)
-* `nrfjprog --recover` if it has a softdevice you need to remove that first
-* `nrfjprog -f NRF52 –-chiperase --program 7853.pca10059_bootloader_mbr_v1.0.1.hex`
+* Download [7853.pca10059_bootloader_mbr_v1.0.1.hex](https://devzone.nordicsemi.com/f/nordic-q-a/40924/how-can-i-restore-the-original-bootloader-of-a-pca10059)
+* `cargo install probe-rs-cli` [probe-rs-cli](https://github.com/probe-rs/probe-rs)
+* `probe-rs-cli download --format hex 7853.pca10059_bootloader_mbr_v1.0.1.hex --chip-erase`
