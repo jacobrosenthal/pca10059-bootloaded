@@ -9,6 +9,16 @@ nrf52840-hal = { version = "0.12.1", features = ["rt"] }
 cortex-m-rt = "0.6.13"
 cortex-m = "0.7.2"
 
+[dev-dependencies]
+embassy = { git = "https://github.com/akiles/embassy" }
+embassy-nrf = { git = "https://github.com/akiles/embassy", default-features = false, features = [
+    "52840"
+] }
+
+# for cargo flash
+[package.metadata]
+chip = "nRF52840_xxAA"
+
 # setting dev to same as release until theres a way to have
 # vscode run use release mode. Almost nobody has a debugger
 # hooked up anyway, but if you'll need to change this

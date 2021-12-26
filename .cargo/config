@@ -6,3 +6,10 @@ target = "thumbv7em-none-eabi"
 rustflags = [
    "-C", "link-arg=-Tlink.x",
 ]
+
+[unstable]
+# core requires rustup component add rust-src
+# builds thumbv7em-none-eabihf instead of using prebuilt
+build-std = ["core"]
+# reduce panic bloat
+build-std-features = ["panic_immediate_abort"]
